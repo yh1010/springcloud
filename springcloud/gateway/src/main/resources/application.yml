@@ -1,0 +1,27 @@
+spring:
+    application:
+        name: gateway
+    cloud:
+        gateway:
+            routes:
+            -   id: suyu_route
+                uri: http://httpbin.org
+                filters:
+                  - AddRequestParameter=name,suyu
+                predicates:
+                    - Query=name,java.* # 参数的 key 为 name，value 必须要以 java 开始
+                  #  - Query=name # 表示请求中一定要有 name 参数才会进行转发
+                  #- Path=/2019/0813/{segment} # 表示路径满足 /2019/0612/ 这个规则，都会被进行转发，
+                  #- Method=GET # 只给 GET 请求进行路由
+                  #- After=2021-01-01T01:01:01+08:00[Asia/Shanghai] # 请求时间在 2021-01-01T01:01:01+08:00[Asia/Shanghai] 时间之后，才会被路由。
+            discovery:
+                locator:
+                    enabled: true # 开启自动代理
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:9001/eureka
+
+logging:
+    level:
+        org.springframework.cloud.gateway: debug

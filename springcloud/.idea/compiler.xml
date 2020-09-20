@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="openfeign" />
+        <module name="sentinel" />
+        <module name="hystrix" />
+        <module name="sleuth" />
+        <module name="eureka" />
+        <module name="config-client" />
+        <module name="consul-consumer" />
+        <module name="zuul" />
+        <module name="demo" />
+        <module name="commons" />
+        <module name="micrometer" />
+        <module name="resilience4j" />
+        <module name="nacos" />
+        <module name="nacos01" />
+        <module name="config-server" />
+        <module name="provider" />
+        <module name="stream" />
+        <module name="consul-provider" />
+        <module name="hello-api" />
+        <module name="resilience4j-cloud" />
+        <module name="consumer" />
+        <module name="gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="config-client" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="consul-consumer" options="-parameters" />
+      <module name="consul-provider" options="-parameters" />
+      <module name="consumer" options="-parameters" />
+      <module name="eureka" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="hystrix" options="-parameters" />
+      <module name="micrometer" options="-parameters" />
+      <module name="nacos" options="-parameters" />
+      <module name="nacos01" options="-parameters" />
+      <module name="openfeign" options="-parameters" />
+      <module name="provider" options="-parameters" />
+      <module name="resilience4j-cloud" options="-parameters" />
+      <module name="sentinel" options="-parameters" />
+      <module name="sleuth" options="-parameters" />
+      <module name="stream" options="-parameters" />
+      <module name="zuul" options="-parameters" />
+    </option>
+  </component>
+</project>
